@@ -4,6 +4,10 @@
     <AssemblyName>SuperSocket.Server</AssemblyName>
     <PackageId>SuperSocket.Server</PackageId>
     <Description>SuperSocket server hosting library.</Description>
+    <TargetFrameworks>net5.0</TargetFrameworks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0|AnyCPU'">
+    <DefineConstants>$(DefineConstants);Debug &amp; net5.0</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>

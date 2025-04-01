@@ -135,6 +135,7 @@ namespace SuperSocket.Connection
             await Output.Writer.CompleteAsync().ConfigureAwait(false);
         }
 
+       
         protected async ValueTask<bool> ProcessOutputRead(PipeReader reader)
         {
             var result = await reader.ReadAsync(CancellationToken.None).ConfigureAwait(false);
@@ -161,7 +162,7 @@ namespace SuperSocket.Connection
                     }
                     else
                     {
-                        await sendTask.AsTask().WaitAsync(sendTimeout).ConfigureAwait(false);
+                        await sendTask.AsTask().TimeoutAfter(sendTimeout).ConfigureAwait(false);
                     }
 
                     UpdateLastActiveTime();

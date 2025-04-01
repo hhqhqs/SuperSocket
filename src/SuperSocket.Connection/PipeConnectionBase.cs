@@ -11,6 +11,7 @@ using System.Runtime.CompilerServices;
 
 namespace SuperSocket.Connection
 {
+
     public abstract partial class PipeConnectionBase : ConnectionBase, IConnection, IPipeConnection
     {
         private CancellationTokenSource _cts = new CancellationTokenSource();
