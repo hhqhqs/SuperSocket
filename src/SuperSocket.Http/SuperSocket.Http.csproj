@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Description>SuperSocket shared util classes for HTTP like protocol</Description>
+    <TargetFrameworks>net5.0</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="../SuperSocket.ProtoBase/SuperSocket.ProtoBase.csproj" />
